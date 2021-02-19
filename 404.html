@@ -1,0 +1,93 @@
+Cpp.py0100777000000000000000000000341714007644437007126 0ustar00import os
+import sys
+
+# Dependent on stanage library
+try:
+    import stanage
+except ImportError:
+    print("This resource has a fatal error. The resource stanage.py is missing. Please go to https://starworldstudios.github.io/StarJs/files/pycpp_1.2_starworld_library.gz.tar to get it")
+    os.system("pause")
+    os.startfile("https://starworldstudios.github.io/StarJs/files/pycpp_1.2_starworld_library.gz.tar")
+    sys.exit(0)
+
+try:
+    stanage.about()
+    os.system("cls")
+except BaseException:
+    print("This resource has a fatal error. Resource stanage.py is unstable. Please go to https://starworldstudios.github.io/StarJs/files/pycpp_1.2_starworld_library.gz.tar to get it again")
+    os.system("pause")
+    os.startfile("https://starworldstudios.github.io/StarJs/files/pycpp_1.2_starworld_library.gz.tar")
+    sys.exit(0)
+class Cout:
+    def __lshift__(self,oth):
+        print(oth,end="")
+        return Cout()
+
+def system(command):
+    os.system(command)
+
+
+class Endl:
+    def __repr__(self):
+        return "\n"
+
+
+cout = Cout()
+endl = Endl()
+global ilib
+global lib
+ilib=["cpp"]
+
+def include(lib):
+    if not os.path.exists(lib):
+        print("Cannot find "+lib)
+    else:
+        iv1=(len(lib))
+        iv2=(len(lib)-3)
+        if lib[iv2:iv1]==(".py"):
+            ilib.insert(0,lib)
+            os.system(lib)
+            __import__(sys.path[0]+lib)
+            print(lib+" successfully installed")
+            print("Use import "+lib+" Command to Import")
+        else:
+            print("File Type Error!")
+
+def printf(printf):
+    if "stdio.py" in ilib:
+        print(printf)
+    else:
+        printf()
+
+
+
+def Help():
+    print("User installed libraries:")
+    print(os.listdir("./"))
+    print("Can use include() to call")
+stanage.py0100777000000000000000000000113414007501504010003 0ustar00import calendar
+import time
+
+def WhileMaths():
+    global a
+    a = 0
+    return(a)
+    while True:
+        time.sleep(0)
+        a = a + 1
+        return(a)
+
+def getCalendar(year,month):
+    cale = calendar.month(year, month)
+    return cale
+
+def about():
+    print("💾__About__💾")
+    print("_____________")
+    print("| getCalendar(Year,Month); to GetCalendar")
+    print("|—————|Return Calendar")
+    print("|____________")
+    print("| WhileMaths(); to Get Any + 1 Maths")
+    print("|_____|Return *")
+    print("|___|Return * + 1")
+    print("|____________")
